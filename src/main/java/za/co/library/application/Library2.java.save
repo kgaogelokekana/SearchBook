@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Library2{
+public static void main(String[]args){
+Scanner scan = new Scanner(System.in);
+
+
+System.out.println("WELCOME TO ABC LIBRARY");
+System.out.println("\n 1.Add Book \n 2.Rent Book \n 3.Register Member \n 4.Return Book \n 5.Print Renting History \n 6.Exit System  \n \n Enter Option Number:");
+
+int option = scan.nextInt();
+
+switch(option){
+case 1:
+ System.out.println("Add New Book /n Enter Title:");
+ String title = scan.nextLine();
+ System.out.println("Enter Publisher:");
+ String publisher = scan.nextLine();
+ System.out.println("Enter Published Date:");
+ String published = scan.nextLine();
+ System.out.println("Enter Author:");
+ String author = scan.nextLine();
+ System.out.println("Enter ISBN Number:");
+ String isbn = scan.nextLine();
+ break;
+case 2:
+ System.out.println("Rent Book");
+ break;
+case 3:
+ System.out.println("Register Member:");
+ break;
+case 4:
+ System.out.println("Return Book");
+ break;
+case 5:
+ System.out.println("Print Renting History");
+ break;
+case 6:
+ break;
+
+}
+}
+}
