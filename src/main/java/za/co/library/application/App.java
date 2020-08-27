@@ -96,7 +96,7 @@ System.out.println("\n Total Amount Owing: R" + numberz[number1]);
 }else if(option == 5){
 System.out.println("PRINT RENTING HISTORY \n");
 System.out.println(" \n <<<BOOKS>>>");
-System.out.println("Title                           ISBN                 AMOUNT"+"\nRound THe World in 80 days   ISBN820037837  R45.60"+"\n Another Day In Pretoria ISBN423037889 R980.00"+"\n ABC ISBN826237837 R123.89"+"\n XYZ The World in 80 Days ISBN539437837 R15.23"+"\n The Best Java Programmer ISBN320007832 R46.60");
+customer.record();
 //System.out.println(customer.getTitle() + customer.getIsbnNumber() + numbers[number]);
 
 }else{
