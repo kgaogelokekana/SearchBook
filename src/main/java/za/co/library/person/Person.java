@@ -98,7 +98,5 @@ System.out.println("Another Day In Pretoria ISBN423037889 R980.00 ");
 System.out.println(" ABC ISBN826237837 R123.89 ");
 System.out.println(" XYZ The World in 80 Days ISBN539437837 R15.23 ");
 return " The Best Java Programmer ISBN320007832 R46.60 ";
-
-}
-
+};
 }
