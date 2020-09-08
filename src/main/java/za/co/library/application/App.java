@@ -3,6 +3,7 @@ package za.co.library.application;
 import za.co.library.person.Person;
 import za.co.library.person.Customer;
 import za.co.library.person.Employee;
+import za.co.library.book.Book;
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ Scanner scan = new Scanner(System.in);
 Customer customer = new Customer();
 Employee employee = new Employee();
 Person person = new Person();
+Book book = new Book();
 
 
 for(int a = 0;a < 6; a++){
@@ -22,38 +24,38 @@ System.out.println("WELCOME TO THE ABC LIBRARY"+"\n What can we do for you today
 int option = scan.nextInt();
 if(option == 1){
 System.out.println("<<<ADD BOOK>>>"+" Enter Book Title:");
-person.setTitle(scan.nextLine());
+book.setTitle(scan.nextLine());
 System.out.println("Enter Publisher:");
 person.setPublisher(scan.nextLine());
 System.out.println("Enter Publishing Date:");
-person.setPublishingDate(scan.nextLine());
+book.setPublishingDate(scan.nextLine());
 System.out.println("Enter Author:");
 person.setAuthor(scan.nextLine());
 System.out.println("Enter ISBN Number:");
-person.setIsbnNumber(scan.nextInt());
+book.setIsbnNumber(scan.nextInt());
 
 //MENU OPTION2
 }else if(option == 2){
 System.out.println("RENT BOOK \n"+"\n Enter ID Number:");
 customer.setIdNumber(scan.nextInt());
 System.out.println("Enter ISBN Number");
-customer.setIsbnNumber(scan.nextInt());
+book.setIsbnNumber(scan.nextInt());
 System.out.println("Number of Rental Days:");
-customer.setRentalDays(scan.nextInt());
+book.setRentalDays(scan.nextInt());
 
 int number =  scan.nextInt();
-ArrayList <Double> numbers = new ArrayList <> ();
-numbers.add(0.00);
-numbers.add(7.50);
-numbers.add(15.00);
-numbers.add(22.50);
-numbers.add(30.00);
-numbers.add(37.50);
+ArrayList <Double> pricez = new ArrayList <> ();
+pricez.add(0.00);
+pricez.add(7.50);
+pricez.add(15.00);
+pricez.add(22.50);
+pricez.add(30.00);
+pricez.add(37.50);
 
 System.out.println("Enter ID Number:"+customer.getIdNumber());
-System.out.println("Enter ISBN Number" + customer.getIsbnNumber());
-System.out.println("Number of Rental Days:" + customer.getRentalDays());
-System.out.println("\n Total Amount:" + numbers.get(number));
+System.out.println("Enter ISBN Number" + book.getIsbnNumber());
+System.out.println("Number of Rental Days:" + book.getRentalDays());
+System.out.println("\n Total Amount:" + pricez.get(number));
 
 //MENU OPTION3
 }else if(option == 3){
@@ -80,26 +82,26 @@ System.out.println("Enter Age:"+customer.getAge());
 System.out.println("RETURN BOOK \n"+" Enter ID Number:");
 customer.setIdNumber(scan.nextInt());
 System.out.println("Enter ISBN Number:");
-customer.setIsbnNumber(scan.nextInt());
+book.setIsbnNumber(scan.nextInt());
 System.out.println("Days OverDue:");
 
 int number1 = scan.nextInt();
-ArrayList <Double> numberz = new ArrayList <> ();
-numberz.add(0.00);
-numberz.add(7.50);
-numberz.add(15.75);
-numberz.add(23.63);
-numberz.add(31.50);
-numberz.add(39.38);
+ArrayList <Double> prices = new ArrayList <> ();
+prices.add(0.00);
+prices.add(7.50);
+prices.add(15.75);
+prices.add(23.63);
+prices.add(31.50);
+prices.add(39.38);
 
-System.out.println("\n Total Amount Owing: R" + numberz.get(number1));
+System.out.println("\n Total Amount Owing: R" + prices.get(number1));
 
 
 //MENU OPTION5
 }else if(option == 5){
 System.out.println("PRINT RENTING HISTORY \n");
 System.out.println(" \n <<<BOOKS>>>");
-customer.record();
+book.record();
 //System.out.println(customer.getTitle() + customer.getIsbnNumber() + numbers[number]);
 
 }else{
